@@ -29,10 +29,12 @@ The dashboard reads directly from the sensor attributes, which keeps the YAML cl
 🔮 Future Improvements
 A few enhancements I may explore later:
 - Weather integration near the clock
-I want a clean, minimal weather display, but I’m still deciding whether to use the built‑in weather entity, a custom card, or a third‑party integration.
+    I want a clean, minimal weather display, but I’m still deciding whether to use the built‑in weather entity, a custom card, or a third‑party integration.
 - Better error handling in the script
-Adding retries, fallback behavior, or logging could make the system more resilient.
-- Dynamic number of snapshots
+    Adding retries, fallback behavior, or logging could make the system more resilient.
+- Have the popup window close automatically after the video has played
+    Pull the clip length from the metadata and see if I can add some code to have the popup window close when the clip is done.
+
 
 
 
