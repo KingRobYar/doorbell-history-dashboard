@@ -1,0 +1,83 @@
+{
+    "result": "success",
+    "session": "<letters and numbers you don't need to worry about>",
+    "data": [
+        {
+            "camera": "Doorbell",
+            "newalerts": 233563,
+            "newalerttime": "0",
+            "path": "@93218429.bvr",
+            "clip": "@92593015.bvr",
+            "file": "Doorbell.20260113_153335.94221.3-3.jpg",
+            "memo": "person:93%",
+            "offset": 94221,
+            "msec": 20870,
+            "flags": 335740930,
+            "res": "2560x1440",
+            "zones": 3,
+            "date": 1768341537,
+            "color": 9068350,
+            "filesize": "19 sec (1.02MB)"
+        },
+        {
+            "camera": "Doorbell",
+            "path": "@92708669.bvr",
+            "clip": "@92593015.bvr",
+            "file": "Doorbell.20260113_153335.52999.3-3.jpg",
+            "memo": "person:91%",
+            "offset": 52999,
+            "msec": 19526,
+            "flags": 335740930,
+            "res": "2560x1440",
+            "zones": 3,
+            "date": 1768340407,
+            "color": 9068350,
+            "filesize": "18 sec (1.23MB)"
+        },
+        {
+            "camera": "Doorbell",
+            "path": "@92671438.bvr",
+            "clip": "@92593015.bvr",
+            "file": "Doorbell.20260113_153335.25646.3-3.jpg",
+            "memo": "person:93%",
+            "offset": 25646,
+            "msec": 27163,
+            "flags": 335740930,
+            "res": "2560x1440",
+            "zones": 3,
+            "date": 1768340188,
+            "color": 9068350,
+            "filesize": "25 sec (1.09MB)"
+        },
+        {
+            "camera": "Doorbell",
+            "path": "@92610771.bvr",
+            "clip": "@92593015.bvr",
+            "file": "Doorbell.20260113_153335.1034.3-3.jpg",
+            "memo": "person:91%",
+            "offset": 1034,
+            "msec": 22801,
+            "flags": 335740930,
+            "res": "2560x1440",
+            "zones": 3,
+            "date": 1768340015,
+            "color": 9068350,
+            "filesize": "21 sec (1.18MB)"
+        },
+        {
+            "camera": "Doorbell",
+            "path": "@92512560.bvr",
+            "clip": "@91796278.bvr",
+            "file": "Doorbell.20260113_150041.300989.3-3.jpg",
+            "memo": "person:92%",
+            "offset": 300989,
+            "msec": 27040,
+            "flags": 335740930,
+            "res": "2560x1440",
+            "zones": 3,
+            "date": 1768339553,
+            "color": 9068350,
+            "filesize": "25 sec (1.16MB)"
+        }
+    ]
+}

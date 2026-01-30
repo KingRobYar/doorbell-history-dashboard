@@ -1,0 +1,175 @@
+views:
+  - title: Doorbell View
+    type: panel
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: sensor
+            entity: sensor.date_and_time
+            name: Time
+            style: |
+              ha-card {
+                font-size: 3em;
+                text-align: center;
+                font-weight: bold;
+              }
+          - type: picture-entity
+            entity: camera.panoptes_doorbell
+            name: Doorbell
+            show_state: true
+            show_name: true
+            camera_view: live
+            fit_mode: cover
+          - type: horizontal-stack
+            cards:
+              - type: custom:button-card
+                card_mod:
+                  style: |
+                    ha-card {
+                      background-image: url("{{ state_attr('sensor.doorbell_alerts', 'alerts')[0]['thumbnail_url'] }}");
+                      background-size: contain; 
+                      background-position: center; 
+                      background-repeat: no-repeat; 
+                      aspect-ratio: 16/9; 
+                      width: auto; 
+                      height: auto; 
+                      overflow: hidden; 
+                    }
+                entity: sensor.doorbell_alerts
+                show_name: false
+                show_state: false
+                show_icon: false
+                show_entity_picture: false
+                tap_action:
+                  action: fire-dom-event
+                  browser_mod:
+                    service: browser_mod.popup
+                    data:
+                      title: Doorbell Video
+                      content:
+                        type: iframe
+                        url: |
+                          [[[ 
+                            const alerts = states['sensor.doorbell_alerts'].attributes['alerts'];
+                            if (!alerts || !alerts[0] || !alerts[0]['video_url']) {
+                              return "about:blank";
+                            } else {
+                              return alerts[0]['video_url'];
+                            }
+                          ]]]
+                      large: true
+              - type: custom:button-card
+                card_mod:
+                  style: |
+                    ha-card {
+                      background-image: url("{{ state_attr('sensor.doorbell_alerts', 'alerts')[1]['thumbnail_url'] }}");
+                      background-size: contain; 
+                      background-position: center; 
+                      background-repeat: no-repeat; 
+                      aspect-ratio: 16/9; 
+                      width: auto; 
+                      height: auto; 
+                      overflow: hidden; 
+                    }
+                entity: sensor.doorbell_thumbnail_url_2
+                show_name: false
+                show_state: false
+                show_icon: false
+                show_entity_picture: false
+                tap_action:
+                  action: fire-dom-event
+                  browser_mod:
+                    service: browser_mod.popup
+                    data:
+                      title: Doorbell Video
+                      content:
+                        type: iframe
+                        url: |
+                          [[[ 
+                            const alerts = states['sensor.doorbell_alerts'].attributes['alerts'];
+                            if (!alerts || !alerts[1] || !alerts[1]['video_url']) {
+                              return "about:blank";
+                            } else {
+                              return alerts[1]['video_url'];
+                            }
+                          ]]]
+                        large: true
+              - type: custom:button-card
+                card_mod:
+                  style: |
+                    ha-card {
+                      background-image: url("{{ state_attr('sensor.doorbell_alerts', 'alerts')[2]['thumbnail_url'] }}");
+                      background-size: contain; 
+                      background-position: center; 
+                      background-repeat: no-repeat; 
+                      aspect-ratio: 16/9; 
+                      width: auto; 
+                      height: auto; 
+                      overflow: hidden; 
+                    }
+                entity: sensor.doorbell_thumbnail_url_3
+                show_name: false
+                show_state: false
+                show_icon: false
+                show_entity_picture: false
+                tap_action:
+                  action: fire-dom-event
+                  browser_mod:
+                    service: browser_mod.popup
+                    data:
+                      title: Doorbell Video
+                      content:
+                        type: iframe
+                        url: |
+                          [[[ 
+                            const alerts = states['sensor.doorbell_alerts'].attributes['alerts'];
+                            if (!alerts || !alerts[2] || !alerts[2]['video_url']) {
+                              return "about:blank";
+                            } else {
+                              return alerts[2]['video_url'];
+                            }
+                          ]]]
+                      large: true
+              - type: custom:button-card
+                card_mod:
+                  style: |
+                    ha-card {
+                      background-image: url("{{ state_attr('sensor.doorbell_alerts', 'alerts')[3]['thumbnail_url'] }}");
+                      background-size: contain; 
+                      background-position: center; 
+                      background-repeat: no-repeat; 
+                      aspect-ratio: 16/9; 
+                      width: auto; 
+                      height: auto; 
+                      overflow: hidden; 
+                    }
+                entity: sensor.doorbell_thumbnail_url_4
+                show_name: false
+                show_state: false
+                show_icon: false
+                show_entity_picture: false
+                tap_action:
+                  action: call-service
+                  service: browser_mod.popup
+                  data:
+                    title: Doorbell Video
+                    content:
+                      type: iframe
+                      url: |
+                        [[[ 
+                          const alerts = states['sensor.doorbell_alerts'].attributes['alerts'];
+                          if (!alerts || !alerts[3] || !alerts[3]['video_url']) {
+                            return "about:blank";
+                          } else {
+                            return alerts[3]['video_url'];
+                          }
+                        ]]]
+                    large: true
+                    browserID: '[[[ return browser_mod.browserID; ]]]'
+          - type: picture-entity
+            entity: camera.panoptes_driveway
+            name: Driveway
+            show_state: true
+            show_name: true
+            camera_view: live
+            fit_mode: cover
