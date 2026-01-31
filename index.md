@@ -9,8 +9,10 @@ There are quite a few tutorials available for how to integrate the Blue Iris sof
 
 ## UI3 Interface
 The UI3 interface already does everything that this dashboard is doing inside of itself. The reason I created this dashboard is because while it has all of the functionality I might want, it has TOO much, and because of that, it's very cramped and hard to use on a smaller device like a tablet or a phone. Most of the discussions I've read in home assistant forums focus on saving images and exporting videos rather than just referencing them directly from the Blue Iris server. Below is an example of what the UI3 interface looks like...
+
 ![Sample UI3 Interface](/images/UI3_Interface.PNG)
 *Blue Iris UI3 showing filtered alerts and live camera view.*
+
 You can see a list of the confirmed alerts (due to the filter) on the left, and selecting any of those would bring up the video player and show that video. Otherwise, the selected camera group shows up as a live view. If you're only ever going to use Home Assistant on a PC, or all of your displays are very large, then you might just paste the address to your Blue Iris server into an iframe and call it a day. Another thing to 
 
 I haven't had a Ring doorbell for quite a few years, but one of the features that both Ring and Nest had right out of the box was one that doesn't seem very easy to reproduce in Home Assistant, so I set out to replicate the best parts of those commercial systems — especially the ability to quickly review recent activity — without giving up privacy, control, or local storage.
